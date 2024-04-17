@@ -1,0 +1,25 @@
+@import '../../../Sass/Libs/variables.scss';
+@import '../../../Sass/Libs/mixin.scss';
+
+.navbar{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-left: 3.5rem;
+
+    &__list{
+        display: flex;
+        gap: 3.5rem;
+        list-style-type: none;
+    }
+
+    &__item{
+        color: $text-color;
+        transition: .3s;
+    }
+
+    &__item:hover,
+    &__item.active{
+        color: $main-color;
+    }
+
+}

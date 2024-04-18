@@ -1,2 +1,94 @@
 @import '../../Sass/Libs/variables.scss';
 @import '../../Sass/Libs/mixin.scss';
+
+.formations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+
+    &__title{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__highlight{
+        color: $main-color;
+    }
+
+    &__row{
+        flex: 1 1 40rem;
+    }
+
+    &__column{
+        flex: 1 1 40rem;
+    }
+
+    &__box{
+        border-left:.2rem solid $main-color;
+    }
+
+    &__box-content{
+        position: relative;
+        padding-left: 2rem;
+    }
+
+    &__box-content::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1.1rem;
+        width: 2rem;
+        height: 2rem;
+        background: $main-color;
+        border-radius: 50%;
+    }
+
+    &__content{
+        position: relative;
+        padding: 1.5rem;
+        border: .2rem solid $main-color;
+        border-radius: .6rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    &__content::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $bg-color-secondary;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &__content:hover::before{
+        width: 100%;
+    }
+
+    &__date{
+        font-size: 1.5rem;
+        color: $main-color;
+        padding-bottom: .5rem;
+    }
+
+    &__diplome{
+        font-size: 2rem;
+    }
+
+    &__list{
+        padding-left: 1.5rem;
+        padding-top: .5rem;
+    }
+
+    &__list-item{
+        font-size: 1.6rem;
+
+    }
+}

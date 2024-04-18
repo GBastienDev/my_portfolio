@@ -1,2 +1,66 @@
 @import '../../Sass/Libs/variables.scss';
 @import '../../Sass/Libs/mixin.scss';
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: $bg-color-secondary;
+    padding-bottom: 6rem;
+
+    &__title{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__highlight{
+        color: $main-color;
+    }
+
+    &__box-img{
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+        display: flex;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;          
+    }
+
+    &__img{
+        width: 90%;
+        border-radius: 50%;
+        border: .2rem solid 
+    }
+
+    &__circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border-top: .2rem solid $bg-color-secondary;
+        border-bottom: .2rem solid $bg-color-secondary;
+        border-left: .2rem solid $main-color;
+        border-right: .2rem solid $main-color;
+    }
+
+    &__content{
+        text-align: center;
+    }
+
+    &__content-title{
+        font-size: 2.6rem;
+    }
+
+    &__desc{
+        font-size: 1.6rem;
+        margin: 2rem 0 3rem;
+    }
+    
+}

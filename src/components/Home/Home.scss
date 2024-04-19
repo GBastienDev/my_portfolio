@@ -6,9 +6,9 @@
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/public/') no-repeat;
-    background-size: cover;
+    background: url('/home1.png') no-repeat;
     background-position: center;
+    background-size: cover;
 
     &__content{
         max-width: 60rem;
@@ -132,5 +132,18 @@
         width: 100%;
     }
 
+    &__img-hover{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        background: transparent;
+        transition: 3s;
+    }
 
+    &__img-hover:hover{
+        background: $bg-color-primary;
+        opacity: .8;
+    }
 }

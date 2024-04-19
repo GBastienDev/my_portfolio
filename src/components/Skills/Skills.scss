@@ -1,2 +1,137 @@
 @import '../../Sass/Libs/variables.scss';
 @import '../../Sass/Libs/mixin.scss';
+
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: $bg-color-secondary;
+
+    &__title{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__highlight{
+        color: $main-color;
+    }
+
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    &__column{
+        flex: 1 1 40rem;
+    }
+
+    &__designation{
+        font-size: 2.5rem;
+        margin: 0 0 1.5rem;
+    }
+
+    &__box{
+        position: relative;
+        border: .2rem solid $main-color;
+        border-radius: .6rem;
+        padding: .5rem 1.5rem;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &__box::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $bg-color-primary;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &__box:hover::before{
+        width: 100%;
+    }
+
+    &__progress{
+        padding: 1rem 0;
+    }
+
+    &__name{
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bar{
+        height: 2.5rem;
+        border-radius: .6rem;
+        border: .2rem solid $main-color;
+        padding: .5rem;
+        margin: 1rem 0;
+    }
+
+    &__bar-color{
+        display: block;
+        height: 100%;
+        border-radius: .3rem;
+        background: $main-color;
+    }
+
+    
+}
+
+/**
+  *bar-color Variation
+  */
+
+.skills__bar-color--html{
+    width: 90%;
+}
+
+.skills__bar-color--css{
+    width: 80%;
+}
+
+.skills__bar-color--sass{
+    width: 70%;
+}
+
+.skills__bar-color--js{
+    width: 65%;
+}
+
+.skills__bar-color--react{
+    width: 80%;
+}
+
+.skills__bar-color--ajax{
+    width: 80%;
+}
+
+.skills__bar-color--json{
+    width: 90%;
+}
+
+.skills__bar-color--sql{
+    width: 70%;
+}
+
+.skills__bar-color--seq{
+    width: 65%;
+}
+
+.skills__bar-color--node{
+    width: 90%;
+}
+
+.skills__bar-color--api{
+    width: 80%;
+}
+
+.skills__bar-color--express{
+    width: 80%;
+}

@@ -19,6 +19,8 @@ const Home = () => {
                     <a className="home__social" href="https://www.linkedin.com/in/bastien-gambet-779103293/" target="_blank"><i className='bx bxl-linkedin-square'></i></a>
                     <a className="home__social" href="https://github.com/GBastienDev" target="_blank"><i className='bx bxl-github'></i></a>
                 </div>
+
+                <div className="home__img-hover"></div>
             </section>
         </>
     )

@@ -14,6 +14,18 @@
     z-index: 100;
     transition: .3s;
 
+    @include respond-to('medium'){
+        padding: 2rem 4%;
+    }
+
+    @include respond-to('small'){
+        background: $bg-color-primary;
+
+        #menu-icon{
+            display: block;
+        }
+    }
+
     &.sticky{
         background: $bg-color-primary;
     }

@@ -9,6 +9,10 @@
     padding: 2rem 9%;
     background: $bg-color-secondary;
 
+    @include respond-to('medium'){
+        padding: 2rem 4%;
+    }
+
     &__content{
         display: flex;
         align-items: center;

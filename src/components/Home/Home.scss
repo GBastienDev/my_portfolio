@@ -10,8 +10,13 @@
     background-position: center;
     background-size: cover;
 
+    @include respond-to('medium'){
+        padding: 0 4%;
+    }
+
     &__content{
         max-width: 60rem;
+        z-index: 99;
     }
 
     &__title{
@@ -140,6 +145,12 @@
         height: 100%;
         background: transparent;
         transition: 3s;
+
+        @include respond-to ('small'){
+            pointer-events: none;
+            background: $bg-color-primary;
+            opacity: .6;
+        }
     }
 
     &__img-hover:hover{

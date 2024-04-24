@@ -90,6 +90,10 @@
         font-size: 2rem;
         color: $text-color;
         max-width: 100%;
+
+        @include respond-to(micro){
+            text-align: center;
+        }
     }
 }
 

@@ -13,12 +13,28 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --i1 : 1;
+    --i2 : 2;
+    --i3 : 3;
+    --i4 : 4;
+    --i5 : 5;
+    --i6 : 6;
+    --i7 : 7;
+    --formation-i1 : 1;
+    --formation-i2 : 2;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
 
     @include respond-to('large'){
         font-size: 55%;
+    }
+
+    @include respond-to(x-small){
+        font-size: 50%;
     }
 }
 

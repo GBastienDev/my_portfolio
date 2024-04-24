@@ -5,12 +5,12 @@ const Skills = () => {
     return (
         <>
             <section className="skills" id="skills">
-                <h2 className="skills__title">Mes <span className="skills__highlight">compétences</span></h2>
+                <h2 className="skills__title">Mes <span className="skills__highlight">compétences</span><span className="animate animate--secondary" style={{'--i' : 'var(--i1)'}}></span></h2>
 
                 <div className="skills__row">
 
                     <div className="skills__column">
-                        <h3 className="skills__designation">Front-end</h3>
+                        <h3 className="skills__designation">Front-end<span className="animate animate--secondary" style={{'--i' : 'var(--i2)'}}></span></h3>
                         <div className="skills__box">
                             <div className="skills__content">
 
@@ -48,13 +48,13 @@ const Skills = () => {
                                     <h4 className="skills__name">JSON <span>90%</span></h4>
                                     <div className="skills__bar"><span className="skills__bar-color skills__bar-color--json"></span></div>
                                 </div>
-
+                                <span className="animate animate--secondary" style={{'--i' : 'var(--i3)'}}></span>
                             </div>
                         </div>
                     </div>
 
                     <div className="skills__column">
-                        <h3 className="skills__designation">Back-end</h3>
+                        <h3 className="skills__designation">Back-end<span className="animate animate--secondary" style={{'--i' : 'var(--i4)'}}></span></h3>
                         <div className="skills__box">
                             <div className="skills__content">
 
@@ -83,10 +83,11 @@ const Skills = () => {
                                     <h4 className="skills__name">Express.js <span>80%</span></h4>
                                     <div className="skills__bar"><span className="skills__bar-color skills__bar-color--express"></span></div>
                                 </div>
-
+                                <span className="animate animate--secondary" style={{'--i' : 'var(--i5)'}}></span>
                             </div>
                         </div>
                     </div>
+                    <span className="animate animate--secondary" style={{'--i' : 'var(--i2)'}}></span>
                 </div>
             </section>
         </>

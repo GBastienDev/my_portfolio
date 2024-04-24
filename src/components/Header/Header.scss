@@ -31,6 +31,7 @@
     }
 
     &__logo{
+        position: relative;
         font-size: 2.5rem;
         color: $text-color;
         font-weight: 600;
@@ -38,8 +39,41 @@
 }
 
 #menu-icon{
+    position: relative;
     font-size: 3.6rem;
     color: $text-color;
     cursor: pointer;
     display: none;
 }
+
+/**
+  *ANIMATION RELOAD AND SCROLL
+  */
+
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $bg-color-primary;
+    z-index: 98;
+}
+
+.header__logo .animate,
+.navbar .animate,
+#menu-icon .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+
+/**
+  *KEYFRAMES ANIMATION
+  */
+
+  @keyframes showRight {
+    100% {
+        width: 0;
+    }
+  }

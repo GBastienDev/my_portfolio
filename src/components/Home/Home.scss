@@ -14,20 +14,47 @@
         padding: 0 4%;
     }
 
+    @include respond-to('x-micro'){
+        justify-content: center;
+    }
+
     &__content{
         max-width: 60rem;
         z-index: 99;
+
+        @include respond-to('x-micro'){
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+        }
     }
 
     &__title{
+        position: relative;
+        display: inline-block;
         font-size: 5.6rem;
         font-weight: 700;
         line-height: 1.3;
+
+        @include respond-to ('x-small'){
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include respond-to ('micro'){
+            font-size: 5.2rem;
+        }
+
+        @include respond-to('x-micro'){
+            font-size: 5rem;
+        }
     }
 
     &__text-animate{
         position: relative;
-        width: 32.8rem;
+        width: 30rem;
     }
 
     &__highlight{
@@ -35,9 +62,30 @@
         font-weight: 700;
         color: transparent;
         -webkit-text-stroke: .7px $main-color;
+        background-image: linear-gradient($main-color, $main-color);
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-position: -33rem 0;
+        animation: homeBgText 6s linear infinite;
+        animation-delay: 2s;
+    }
+    
+
+    &__highlight::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-right: 2px solid $main-color;
+        z-index: -1;
+        animation: homeCursorText 6s linear infinite;
+        animation-delay: 2s;
     }
 
     &__desc{
+        position: relative;
         font-size: 1.6rem;
         margin: 2rem 0 4rem;
     }
@@ -52,6 +100,10 @@
         justify-content: space-between;
         width: 34.5rem;
         height: 5rem;
+
+        @include respond-to('x-micro'){
+            justify-content: center;
+        }
     }
 
     &__button{
@@ -98,6 +150,10 @@
         width: 170px;
         display: flex;
         justify-content: space-around;
+
+        @include respond-to('x-small'){
+            width: 160px;
+        }
     }
 
     &__social{
@@ -115,6 +171,11 @@
         z-index: 1;
         overflow: hidden;
         transition: .5s;
+
+        @include respond-to('x-small'){
+            width: 38px;
+            height: 38px;
+        }
     }
 
     &__social:hover{
@@ -158,3 +219,59 @@
         opacity: .8;
     }
 }
+
+/**
+  *KEYFRAMES ANIMATION
+  */
+
+@keyframes homeBgText {
+    0%,10%,100%{
+        background-position: -30.5rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%,10%,100%{
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81%{
+        opacity: 0;
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+  }
+
+/**
+  *ANIMATION RELOAD AND SCROLL
+  */
+  
+.animate.home-img{
+    width: 50%;
+}
+
+.home.show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+
+ 
+

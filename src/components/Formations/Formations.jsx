@@ -5,7 +5,7 @@ const Formations = () => {
     return (
         <>
             <section className="formations" id="formations">
-                <h2 className="formations__title">Mes <span className="formations__highlight">formations</span></h2>
+                <h2 className="formations__title">Mes <span className="formations__highlight">formations</span><span className="animate scroll" style={{'--i' : 'var(--i1)'}}></span></h2>
                 <div className="formations__row">
                     <div className="formations__column">
 
@@ -27,6 +27,7 @@ const Formations = () => {
                                         <li className="formations__list-item">Réalisation d'un projet final à présenter devant un jury</li>
                                     </ul>
                                 </div>
+                                <span className="animate scroll" style={{'--i' : 'var(--i2)'}}></span>
                             </div>
                         </div>
 
@@ -45,6 +46,7 @@ const Formations = () => {
                                         <li className="formations__list-item">Sauvegarde et récupération des données</li>
                                     </ul>
                                 </div>
+                                <span className="animate scroll" style={{'--i' : 'var(--i3)'}}></span>
                             </div>
                         </div>
 
@@ -62,6 +64,7 @@ const Formations = () => {
                                         <li className="formations__list-item">Gestion administrative</li>
                                     </ul>
                                 </div>
+                                <span className="animate scroll" style={{'--i' : 'var(--i4)'}}></span>
                             </div>
                         </div>
 

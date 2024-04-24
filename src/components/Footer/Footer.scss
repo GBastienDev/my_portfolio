@@ -13,14 +13,28 @@
         padding: 2rem 4%;
     }
 
+    @include respond-to('micro'){
+        flex-direction: column-reverse;
+    }
+
     &__content{
         display: flex;
         align-items: center;
-        gap: 1rem;   
+        gap: 1rem;
+
+        @include respond-to ('x-micro'){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__desc{
         font-size: 1.6rem;
+
+        @include respond-to ('x-micro'){
+            font-size: 1.8rem;
+            margin-top: 1rem;
+        }
     }
 
     &__box-icon{

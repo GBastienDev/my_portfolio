@@ -30,8 +30,8 @@ const Header = () => {
     return (
         <>
             <header className={`header ${isSticky ? 'sticky' : ''} `}>
-                <a href="#" className="header__logo">Bastien.</a>
-                <div className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`} onClick={toggleMenu} id="menu-icon"></div>
+                <a href="#" className="header__logo">Bastien.<span className="animate" style={{'--i': 'var(--i1)'}}></span></a>
+                <div className={`bx ${isActive ? 'bx-x' : 'bx-menu'}`} onClick={toggleMenu} id="menu-icon"><span className="animate" style={{'--i': 'var(--i2)'}}></span></div>
                 <Nav isActive={isActive} closeMenu={closeMenu} />
             </header>
         </>

@@ -2,6 +2,7 @@
 @import '../../../Sass/Libs/mixin.scss';
 
 .navbar{
+    position: relative;
     font-size: 1.7rem;
     font-weight: 500;
     margin-left: 3.5rem;
@@ -33,6 +34,10 @@
             }
         }
 
+    }
+
+    @include respond-to('x-small'){
+        left: -115%;
     }
 
     &__list{
@@ -78,3 +83,5 @@
     transition: .25s ease;
     transition-delay: 0s;
 }
+
+
